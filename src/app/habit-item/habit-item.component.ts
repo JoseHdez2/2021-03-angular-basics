@@ -3,7 +3,9 @@ import { Habit } from '../habit';
 
 @Component({
   selector: 'app-habit-item',
-  template: `<li>{{habit.title}} (Count: {{habit.count}}</li>`,
+  template: `<li [style.color]="habit.streak ? 'red' : 'black' ">
+    {{habit.title}} (Count: {{habit.count}})
+  </li>`,
   styles: [
   ]
 })

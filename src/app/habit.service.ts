@@ -15,7 +15,7 @@ export class HabitService {
     {
       id: 2,
       title: "Take names",
-      count: 4
+      count: 6
     }
   ]
 
