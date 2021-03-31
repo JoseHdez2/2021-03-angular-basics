@@ -1,24 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { Habit } from './habit';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabitService {
-  habits = [
+  habits: Habit[] = [
     {
       id: 1,
-      title: "Play games"
+      title: "Play games",
+      count: 5
     },
     {
       id: 2,
-      title: "Take names"
+      title: "Take names",
+      count: 4
     }
   ]
 
   constructor() { }
 
-  getHabits() : Observable<any> {
+  getHabits() : Observable<Habit[]> {
     return of(this.habits);
   }
 
